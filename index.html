@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Bootstrap Project</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-3 fw-bold mb-4">Hi, I'm a Web Developer</h1>
+                    <p class="lead mb-4">Creating beautiful and functional websites with modern technologies</p>
+                    <a href="#projects" class="btn btn-primary btn-lg me-2">View My Work</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-4">About Me</h2>
+                    <p class="text-center lead">
+                        I'm a passionate web developer with experience in building responsive and user-friendly websites. 
+                        I love working with modern frameworks and technologies to create amazing digital experiences.
+                    </p>
+                    <div class="text-center mt-4">
+                        <span class="badge bg-primary me-2 mb-2">HTML5</span>
+                        <span class="badge bg-primary me-2 mb-2">CSS3</span>
+                        <span class="badge bg-primary me-2 mb-2">JavaScript</span>
+                        <span class="badge bg-primary me-2 mb-2">Bootstrap</span>
+                        <span class="badge bg-primary me-2 mb-2">React</span>
+                        <span class="badge bg-primary me-2 mb-2">Node.js</span>
+                        <span class="badge bg-primary me-2 mb-2">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">My Projects</h2>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/0d6efd/ffffff?text=Project+1" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Commerce Website</h5>
+                            <p class="card-text">A fully responsive e-commerce platform with shopping cart functionality and payment integration.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">React</span>
+                                <span class="badge bg-secondary me-1">Node.js</span>
+                                <span class="badge bg-secondary me-1">MongoDB</span>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/198754/ffffff?text=Project+2" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Task Management App</h5>
+                            <p class="card-text">A collaborative task management application with real-time updates and team features.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">Vue.js</span>
+                                <span class="badge bg-secondary me-1">Firebase</span>
+                                <span class="badge bg-secondary me-1">Bootstrap</span>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/dc3545/ffffff?text=Project+3" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Weather Dashboard</h5>
+                            <p class="card-text">A weather application that displays current weather and forecasts using external APIs.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">JavaScript</span>
+                                <span class="badge bg-secondary me-1">API</span>
+                                <span class="badge bg-secondary me-1">CSS3</span>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/ffc107/000000?text=Project+4" class="card-img-top" alt="Project 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Platform</h5>
+                            <p class="card-text">A modern blogging platform with markdown support and user authentication.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">Next.js</span>
+                                <span class="badge bg-secondary me-1">TypeScript</span>
+                                <span class="badge bg-secondary me-1">PostgreSQL</span>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project4Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/6c757d/ffffff?text=Project+5" class="card-img-top" alt="Project 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Generator</h5>
+                            <p class="card-text">A tool that helps developers create beautiful portfolio websites quickly.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">Python</span>
+                                <span class="badge bg-secondary me-1">Flask</span>
+                                <span class="badge bg-secondary me-1">Jinja2</span>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project5Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250/20c997/ffffff?text=Project+6" class="card-img-top" alt="Project 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Chat Application</h5>
+                            <p class="card-text">A real-time chat application with private messaging and group chat features.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">Socket.io</span>
+                                <span class="badge bg-secondary me-1">Express</span>
+                                <span class="badge bg-secondary me-1">Redis</span>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project6Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-4">Contact Me</h2>
+                    <p class="text-center mb-5">Have a project in mind? Let's work together!</p>
+                    
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="your.email@example.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Project inquiry" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="mb-3">
+                <a href="#" class="text-white me-3"><i class="bi bi-github fs-4"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-envelope fs-4"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modals -->
+    
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project1ModalLabel">E-Commerce Website</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/800x400/0d6efd/ffffff?text=E-Commerce+Website" class="img-fluid mb-3" alt="Project 1">
+                    <h6>Project Description</h6>
+                    <p>A comprehensive e-commerce platform built with modern web technologies. Features include user authentication, product catalog, shopping cart, checkout process, and payment integration with Stripe.</p>
+                    
+                    <h6>Key Features</h6>
+                    <ul>
+                        <li>User registration and authentication</li>
+                        <li>Product search and filtering</li>
+                        <li>Shopping cart with persistent storage</li>
+                        <li>Secure payment processing</li>
+                        <li>Order tracking and history</li>
+                        <li>Admin dashboard for inventory management</li>
+                    </ul>
+                    
+                    <h6>Technologies Used</h6>
+                    <p>
+                        <span class="badge bg-primary me-1">React</span>
+                        <span class="badge bg-primary me-1">Node.js</span>
+                        <span class="badge bg-primary me-1">Express</span>
+                        <span class="badge bg-primary me-1">MongoDB</span>
+                        <span class="badge bg-primary me-1">Stripe API</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary">View Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary">View Code</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project2ModalLabel">Task Management App</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/800x400/198754/ffffff?text=Task+Management+App" class="img-fluid mb-3" alt="Project 2">
+                    <h6>Project Description</h6>
+                    <p>A collaborative task management application designed for teams. Built with Vue.js and Firebase for real-time synchronization across multiple users.</p>
+                    
+                    <h6>Key Features</h6>
+                    <ul>
+                        <li>Real-time task updates</li>
+                        <li>Team collaboration features</li>
+                        <li>Drag-and-drop task organization</li>
+                        <li>Task priority and due dates</li>
+                        <li>Comments and file attachments</li>
+                        <li>Progress tracking and reporting</li>
+                    </ul>
+                    
+                    <h6>Technologies Used</h6>
+                    <p>
+                        <span class="badge bg-success me-1">Vue.js</span>
+                        <span class="badge bg-success me-1">Firebase</span>
+                        <span class="badge bg-success me-1">Bootstrap</span>
+                        <span class="badge bg-success me-1">Vuex</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-success">View Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary">View Code</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project3ModalLabel">Weather Dashboard</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/800x400/dc3545/ffffff?text=Weather+Dashboard" class="img-fluid mb-3" alt="Project 3">
+                    <h6>Project Description</h6>
+                    <p>An interactive weather dashboard that provides current weather conditions and forecasts. Uses OpenWeather API for real-time weather data.</p>
+                    
+                    <h6>Key Features</h6>
+                    <ul>
+                        <li>Current weather conditions</li>
+                        <li>5-day weather forecast</li>
+                        <li>Location-based weather detection</li>
+                        <li>Search by city name</li>
+                        <li>Weather maps and visualizations</li>
+                        <li>Favorite locations saving</li>
+                    </ul>
+                    
+                    <h6>Technologies Used</h6>
+                    <p>
+                        <span class="badge bg-danger me-1">JavaScript</span>
+                        <span class="badge bg-danger me-1">OpenWeather API</span>
+                        <span class="badge bg-danger me-1">CSS3</span>
+                        <span class="badge bg-danger me-1">Chart.js</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-danger">View Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary">View Code</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 4 Modal -->
+    <div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project4ModalLabel">Blog Platform</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/800x400/ffc107/000000?text=Blog+Platform" class="img-fluid mb-3" alt="Project 4">
+                    <h6>Project Description</h6>
+                    <p>A modern blogging platform with support for markdown content, user authentication, and social features. Built with Next.js for optimal performance and SEO.</p>
+                    
+                    <h6>Key Features</h6>
+                    <ul>
+                        <li>Markdown editor with live preview</li>
+                        <li>User profiles and authentication</li>
+                        <li>Comment system with moderation</li>
+                        <li>Tags and categories</li>
+                        <li>Search functionality</li>
+                        <li>RSS feed generation</li>
+                    </ul>
+                    
+                    <h6>Technologies Used</h6>
+                    <p>
+                        <span class="badge bg-warning text-dark me-1">Next.js</span>
+                        <span class="badge bg-warning text-dark me-1">TypeScript</span>
+                        <span class="badge bg-warning text-dark me-1">PostgreSQL</span>
+                        <span class="badge bg-warning text-dark me-1">Prisma</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-warning text-dark">View Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary">View Code</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 5 Modal -->
+    <div class="modal fade" id="project5Modal" tabindex="-1" aria-labelledby="project5ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project5ModalLabel">Portfolio Generator</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/800x400/6c757d/ffffff?text=Portfolio+Generator" class="img-fluid mb-3" alt="Project 5">
+                    <h6>Project Description</h6>
+                    <p>A web application that helps developers quickly create professional portfolio websites. Features customizable templates and easy deployment options.</p>
+                    
+                    <h6>Key Features</h6>
+                    <ul>
+                        <li>Multiple portfolio templates</li>
+                        <li>Drag-and-drop customization</li>
+                        <li>Theme color picker</li>
+                        <li>Project showcase section</li>
+                        <li>Contact form integration</li>
+                        <li>One-click deployment to hosting platforms</li>
+                    </ul>
+                    
+                    <h6>Technologies Used</h6>
+                    <p>
+                        <span class="badge bg-secondary me-1">Python</span>
+                        <span class="badge bg-secondary me-1">Flask</span>
+                        <span class="badge bg-secondary me-1">Jinja2</span>
+                        <span class="badge bg-secondary me-1">SQLite</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-secondary">View Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary">View Code</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 6 Modal -->
+    <div class="modal fade" id="project6Modal" tabindex="-1" aria-labelledby="project6ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project6ModalLabel">Chat Application</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/800x400/20c997/ffffff?text=Chat+Application" class="img-fluid mb-3" alt="Project 6">
+                    <h6>Project Description</h6>
+                    <p>A real-time chat application with support for private messaging, group chats, and multimedia sharing. Built with Socket.io for instant communication.</p>
+                    
+                    <h6>Key Features</h6>
+                    <ul>
+                        <li>Real-time messaging with Socket.io</li>
+                        <li>Private and group chat rooms</li>
+                        <li>File and image sharing</li>
+                        <li>Typing indicators</li>
+                        <li>Message history and search</li>
+                        <li>Online status indicators</li>
+                    </ul>
+                    
+                    <h6>Technologies Used</h6>
+                    <p>
+                        <span class="badge bg-info me-1">Socket.io</span>
+                        <span class="badge bg-info me-1">Express</span>
+                        <span class="badge bg-info me-1">Redis</span>
+                        <span class="badge bg-info me-1">MongoDB</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-info">View Live Demo</a>
+                    <a href="#" class="btn btn-outline-secondary">View Code</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

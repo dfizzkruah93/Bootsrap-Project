@@ -76,17 +76,19 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 // Animate progress bars on scroll
 const progressBars = document.querySelectorAll('.progress-bar');
 const skillsSection = document.getElementById('skills');
+let progressBarsAnimated = false;
 
 const animateProgressBars = () => {
     const sectionTop = skillsSection.getBoundingClientRect().top;
     const triggerPoint = window.innerHeight * 0.75;
     
-    if (sectionTop < triggerPoint) {
+    if (sectionTop < triggerPoint && !progressBarsAnimated) {
+        progressBarsAnimated = true;
         progressBars.forEach(bar => {
-            const width = bar.style.width;
+            const targetWidth = bar.getAttribute('aria-valuenow') + '%';
             bar.style.width = '0%';
             setTimeout(() => {
-                bar.style.width = width;
+                bar.style.width = targetWidth;
             }, 100);
         });
         // Remove listener after animation
@@ -104,14 +106,11 @@ const observerOptions = {
 
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, 100);
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+            entry.target.classList.add('animated');
+            entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
             observer.unobserve(entry.target);
         }
     });
@@ -119,16 +118,9 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Observe all cards
 document.querySelectorAll('.card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
     observer.observe(card);
-});
-
-// Add loading animation
-window.addEventListener('load', function() {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
 });
 
 console.log('Portfolio website loaded successfully!');

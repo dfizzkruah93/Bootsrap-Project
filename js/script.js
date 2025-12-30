@@ -41,8 +41,22 @@ if (contactForm) {
         // In a real application, you would send this data to a server
         console.log('Form submitted:', { name, email, subject, message });
         
-        // Show success message (you could use Bootstrap toast or alert)
-        alert('Thank you for your message! I will get back to you soon.');
+        // Show success message using a simple approach
+        // In production, consider using Bootstrap toast or modal
+        const successMessage = document.createElement('div');
+        successMessage.className = 'alert alert-success alert-dismissible fade show mt-3';
+        successMessage.innerHTML = `
+            <strong>Success!</strong> Thank you for your message! I will get back to you soon.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        contactForm.insertAdjacentElement('afterend', successMessage);
+        
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+            if (successMessage.parentNode) {
+                successMessage.remove();
+            }
+        }, 5000);
         
         // Reset form
         contactForm.reset();
@@ -57,7 +71,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 100)) {
+        if (window.scrollY >= (sectionTop - 100)) {
             current = section.getAttribute('id');
         }
     });
